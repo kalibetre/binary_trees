@@ -1,4 +1,5 @@
 # Binary Trees
+This is a repo for 0x1D C - Binary trees of the ALX SE (Holberton)
 
 A **Binary Tree** is a tree data structure in which each node has at most two children (left and right child).
 
@@ -15,3 +16,7 @@ This repo covers the following concepts
 ## Requirements
 
 This project should be compiled on Ubuntu 20.04LTS using `gcc` with `-Wall -Werror -Wextra -pedantic -std=gnu89` flags
+
+## Test Files
+
+Test files are included in the tests folder to check the functionalities of each implementations.
