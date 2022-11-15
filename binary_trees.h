@@ -49,6 +49,7 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 size_t _binary_tree_height(const binary_tree_t *tree);
 size_t binary_tree_left_most_depth(const binary_tree_t *tree);
 int _is_perfect(size_t req_depth, size_t depth, const binary_tree_t *tree);
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
+binary_tree_t *binary_trees_ancestor(
+	const binary_tree_t *first, const binary_tree_t *second);
 
 #endif
