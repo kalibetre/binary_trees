@@ -4,11 +4,13 @@
  * _binary_tree_inorder - traverses a tree in in-order traversal
  *
  * @tree: pointer to the root node of a tree
- * @func: pointer to the function to call for each node
+ * @prev: pointer to the prev visited node
+ * Return: 0 if it is bts otherwise -1
  */
 int _binary_tree_inorder(const binary_tree_t *tree, const binary_tree_t *prev)
 {
 	int check = 0;
+
 	if (tree == NULL)
 		return (0);
 
