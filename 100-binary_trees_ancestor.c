@@ -15,20 +15,8 @@ binary_tree_t *binary_trees_ancestor(
 	if (first == NULL || second == NULL)
 		return (NULL);
 
-	p_first = (binary_tree_t *)first->parent;
-	p_second = (binary_tree_t *)second->parent;
-
-	if (p_first == NULL)
-		return ((binary_tree_t *)first);
-
-	if (p_second == NULL)
-		return ((binary_tree_t *)second);
-
-	if (p_first == second)
-		return (p_first);
-
-	if (p_second == first)
-		return (p_second);
+	p_first = (binary_tree_t *)first;
+	p_second = (binary_tree_t *)second;
 
 	while (p_first != NULL)
 	{
