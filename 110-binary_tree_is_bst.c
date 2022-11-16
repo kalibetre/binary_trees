@@ -1,24 +1,25 @@
 #include "binary_trees.h"
 
 /**
- * _binary_tree_inorder - traverses a tree in in-order traversal
+ * _is_bst - check if tree is binary search tree by traversing it in in-order
+ * traversal
  *
  * @tree: pointer to the root node of a tree
  * @prev: pointer to the last visited node
  * Return: 1 if it is bts otherwise 0
  */
-int _binary_tree_inorder(const binary_tree_t *tree, binary_tree_t **prev)
+int _is_bst(const binary_tree_t *tree, binary_tree_t **prev)
 {
 	int check = 0;
 
 	if (tree == NULL)
 		return (1);
 
-	check = _binary_tree_inorder(tree->left, prev);
+	check = _is_bst(tree->left, prev);
 	if (check == 0 || (*prev != NULL && (*prev)->n >= tree->n))
 		return (0);
 	*prev = (binary_tree_t *)tree;
-	return (_binary_tree_inorder(tree->right, prev));
+	return (_is_bst(tree->right, prev));
 }
 
 /**
@@ -34,5 +35,5 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 
-	return (_binary_tree_inorder(tree, &prev));
+	return (_is_bst(tree, &prev));
 }
