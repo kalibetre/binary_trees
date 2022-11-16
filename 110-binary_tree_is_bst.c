@@ -14,10 +14,14 @@ int _binary_tree_inorder(const binary_tree_t *tree, const binary_tree_t *prev)
 	if (tree == NULL)
 		return (0);
 
-	check = _binary_tree_inorder(tree->left, tree);
-	if (prev != NULL && (check < 0 || prev->n >= tree->n))
+	if (tree->left != NULL && tree->n <= tree->left->n)
 		return (-1);
-	return (_binary_tree_inorder(tree->right, tree));
+
+	check = _binary_tree_inorder(tree->left, prev);
+	if (check < 0 || (prev != NULL && prev->n >= tree->n))
+		return (-1);
+	prev = tree;
+	return (_binary_tree_inorder(tree->right, prev));
 }
 
 /**
