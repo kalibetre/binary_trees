@@ -2,9 +2,9 @@
 
 /**
  * insert_to_queue - Inserts a node to a queue
+ * @queue: The queue
+ * @tree: Pointer to the root of tree
  *
- * @queue - The queue
- * @tree - Pointer to the root of tree
  * Return: The head of the queue
  */
 queue_t *insert_to_queue(queue_t **queue, const binary_tree_t *tree)
@@ -24,16 +24,15 @@ queue_t *insert_to_queue(queue_t **queue, const binary_tree_t *tree)
 		(*queue)->head = node;
 	else
 		(*queue)->tail->next = node;
-	
+
 	(*queue)->tail = node;
 	return (*queue);
 }
 
 /**
  * pop_from_queue - Pops an item from a queue
- *
  * @queue: The queue
- * @func: A function to call on the popped item
+ *
  * Return: The head of the queue
  */
 binary_tree_t *pop_from_queue(queue_t **queue)

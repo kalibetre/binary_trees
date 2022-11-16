@@ -24,9 +24,9 @@ typedef struct binary_tree_s avl_t;
 typedef struct binary_tree_s heap_t;
 
 /**
- * struct queue_n - A queue node
+ * struct queue_n_s - A queue node
  *
- * @node: Pointer to a tree node
+ * @value: Pointer to a tree node
  * @next: Pointer to the next tree node
  */
 struct queue_n_s
