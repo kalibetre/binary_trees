@@ -3,7 +3,7 @@
 /**
  * _bst_min_node - gets the minium node in a binary search tree
  *
- * @param tree: the root node to a bst
+ * @tree: the root node to a bst
  * Return: node containing the minimum value
  */
 bst_t *_bst_min_node(bst_t *tree)
